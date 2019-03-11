@@ -1,0 +1,24 @@
+{
+  "name": "ezscraper",
+  "version": "0.0.5",
+  "description": "Simple web scraping module for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobiaszgala/ezscraper.git"
+  },
+  "keywords": [
+    "ezscraper",
+    "content",
+    "scraper"
+  ],
+  "author": "Tobiasz Gala <tobiaszwgala@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tobiaszgala/ezscraper/issues"
+  },
+  "homepage": "https://github.com/tobiaszgala/ezscraper#readme"
+}
