@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/tobiaszgala/ezscraper/issues"
   },
-  "homepage": "https://github.com/tobiaszgala/ezscraper#readme"
+  "homepage": "https://github.com/tobiaszgala/ezscraper#readme",
+  "dependencies": {
+    "jsdom": "^14.0.0",
+    "request": "^2.88.0"
+  }
 }
