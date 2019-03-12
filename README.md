@@ -2,7 +2,7 @@
 Simple, low-dependency web scraping module for nodejs.
 
 ## About
-EZscraper is a simple web scraping module build on top of well maintained JSDOM module. It was created while working on showcase project for Treehouse tech degree. Feel free to contribute and also... please share your projects with me!
+EZscraper is a simple web scraping module build on top of well maintained JSDOM module. It was created while working on the showcase project for Treehouse tech degree. Feel free to contribute and also... please share your projects with me!
 
 ## Installation
 ```
@@ -12,20 +12,20 @@ npm install --save ezscraper
 
 ## Technical details
 
-EZscraper is build on top of JSDOM module. It's vanilla JS friendly so any property should be speficied like regular property from  It uses querySelectorAll to select specified elements on the page. It also support 
+EZscraper is built on top of JSDOM module. Any property should be specified just like you would retrieve it using vanilla JS.  It uses querySelectorAll to select specified elements on the page (returns array). It also supports DOM traversing (see examples).
 
 ```
 ezscraper( url, { options } )
 ```
 
 ## Params
-- **String** *url* : The url of the page we want to collect data.
-- **Object** *options* : Options to help scraper collect data.
+- **String** *url* : The URL of the page we want to collect data.
+- **Object** *options* : Selectors and properties you want to access.
   - *Selector* - Valid CSS selector
   - *Property* - Property we want to retrieve (textContent by default)
 
 ## Returns
-- A **promise object** containing scraped data.
+- A **promise object** containing scraped data (if resolved) or error message (if rejected). Use then-catch for data/error handling.
 
 ## Examples
 
@@ -42,13 +42,13 @@ ezscraper( url, { options } )
 
 ### Example 1
 
-By default, if only valid CSS selector is provided without any additional options, textContent is default property a script is trying to retrieve.
+By default, if only valid CSS selector is provided without any additional options, *textContent* is default property EZscraper is trying to retrieve.
 
 ```javascript
 const ezscraper = require('ezscraper');
 
 ezscraper('http://super-amazing-website.com/', {
-  title : 'div.container h1.title'
+  title : 'div.container h1.title' // Example 1
 }).then( data => console.log(data))
   .catch( error => console.error(error))
   
@@ -71,7 +71,7 @@ const ezscraper = require('ezscraper');
 
 ezscraper('http://super-amazing-website.com/', {
   title : 'div.container h1.title',
-  link : {
+  link : { // Example 2
     selector : 'div.container a',
     property : 'href'
   }
@@ -104,7 +104,7 @@ ezscraper('http://super-amazing-website.com/', {
     selector : 'div.container a',
     property : 'href'
   },
-  node : {
+  node : { // Example 3
     selector : 'div.container span.message',
     property : 'nextSibling.textContent'
   }
@@ -129,7 +129,7 @@ ezscraper('http://super-amazing-website.com/', {
 
 ### Example 4
 
-Each option returns array of objects. Useful when selecting multiple elements.
+Each option returns an array of objects. Useful when selecting multiple elements.
 
 ```html
 <span class="message">Message 1</span>
@@ -159,5 +159,3 @@ ezscraper('http://super-amazing-website.com/', {
 }
 ```
 
-
-// will update documentation soon!
