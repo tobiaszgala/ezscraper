@@ -159,3 +159,7 @@ ezscraper('http://super-amazing-website.com/', {
 }
 ```
 
+### Example project
+
+[Simple content scraper](https://github.com/tobiaszgala/Simple-content-scraper) - Script handles page crawling using EZscraper. Example of using Promise.all to retrieve data from multiple sources.
+
