@@ -13,9 +13,10 @@
   "keywords": [
     "ezscraper",
     "content",
-    "scraper"
+    "scraper",
+    "web-scraper"
   ],
-  "author": "Tobiasz Gala <tobiaszwgala@gmail.com>",
+  "author": "Tobiasz Gala <tobiaszgala@protonmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tobiaszgala/ezscraper/issues"
