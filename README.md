@@ -8,6 +8,13 @@ EZscraper is a simple web scraping module build on top of well maintained JSDOM 
 ```
 npm install --save ezscraper
 ```
+
+To use module simply require it without any additional options.
+
+```
+const ezscraper = require('ezscraper');
+```
+
 ## Documentation
 
 ## Technical details
