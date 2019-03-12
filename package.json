@@ -1,6 +1,6 @@
 {
   "name": "ezscraper",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Simple web scraping module for nodejs",
   "main": "index.js",
   "scripts": {
